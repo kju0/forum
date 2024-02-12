@@ -1,0 +1,75 @@
+.container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.option {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.option.selected {
+    background-color: #d5e7ff;
+}
+
+.content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+}
+
+.content input {
+    display: block;
+    margin: 10px auto; /* 모든 input 요소를 가운데 정렬 */
+    border: 1px solid #ccc; /* 왼쪽 모서리 색상을 설정 */
+    border-radius: 5px; /* 모서리를 둥글게 만듦 */
+    padding: 5px 10px; /* input 요소 내부의 여백을 조절 */
+    box-sizing: border-box; /* padding, border 값을 포함하여 요소의 크기를 조절 */
+}
+
+
+.content input[type="text"],
+.content input[type="password"]{
+    width: calc(100% - 20px); /* 가로 여백을 제외한 전체 너비에서 20px를 빼고 적용 */
+    margin: 10px auto; /* 상하 여백을 조정하여 가운데 정렬 */
+    padding: 10px; /* 내부 여백 설정 */
+    box-sizing: border-box; /* 내부 여백과 테두리를 포함하여 요소의 크기 설정 */
+}
+
+.content input[type="checkbox"] {
+    display: inline-block; /* 인라인 요소로 변경하여 옆에 텍스트와 나란히 위치 */
+    vertical-align: middle; /* 수직 가운데 정렬 */
+    margin-right: 5px; /* 체크박스와 텍스트 사이 여백 조정 */
+}
+
+.content label {
+    display: inline-block; /* 인라인 요소로 변경하여 옆에 위치 */
+    vertical-align: middle; /* 수직 가운데 정렬 */
+    margin-bottom: 10px; /* 체크박스와 텍스트 사이 여백 조정 */
+}
+
+.content button {
+    display: block;
+    margin: 10px auto;
+}

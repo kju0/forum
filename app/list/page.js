@@ -17,7 +17,7 @@ export default async function List() {
             <Link href={'/detail/' + result[i]._id}>           
                 <h4>{result[i].title}</h4>
             </Link>
-            <DetailLink></DetailLink><br></br>
+            <DetailLink id={result[i]._id}></DetailLink><br></br>
             <Link href={'/edit/' + result[i]._id}>✍️</Link>
             <p>2월 13일</p>
             </div>
