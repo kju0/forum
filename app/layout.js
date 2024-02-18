@@ -5,6 +5,7 @@ import LogOutBtn from "./LogOutBtn";
 import SignInBtn from "./SignupBtn";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
+import HeaderProfile from './UserBtn'
 
 
 export default async function RootLayout({ children }) {
@@ -21,7 +22,7 @@ export default async function RootLayout({ children }) {
           <Link href="/list">List</Link>
           {
             session
-              ? <span>{session.user.name} <LogOutBtn /></span>
+              ? <span><HeaderProfile /> <LogOutBtn /></span>
               : <span><SignInBtn></SignInBtn> <SignUpBtn></SignUpBtn></span>
           }
         </div>
